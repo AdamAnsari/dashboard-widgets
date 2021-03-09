@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CloseService } from 'src/app/_services/close.service';
 
 @Component({
   selector: 'app-payment',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private closeService: CloseService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  close() {
+    this.closeService.close();
   }
 
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { CloseService } from 'src/app/_services/close.service';
 
 @Component({
@@ -10,7 +9,6 @@ import { CloseService } from 'src/app/_services/close.service';
 export class AboutComponent implements OnInit {
 
   constructor(
-    private router: Router,
     private closeService: CloseService
   ) { }
 
