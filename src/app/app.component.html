@@ -1,12 +1,27 @@
 <h1>Dashboard Widgets</h1>
-<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
-<nav>
+
+<!-- <nav>
   <ul>
     <li><a routerLink="/about" routerLinkActive="active">About Us Component</a></li>
     <li><a routerLink="/contact" routerLinkActive="active">Contact Component</a></li>
     <li><a routerLink="/payment" routerLinkActive="active">Payment Component</a></li>
     <li><a routerLink="/profile" routerLinkActive="active">Profile Component</a></li>
   </ul>
-</nav>
+</nav> -->
+
+<div class="main-div">
+  <div class="about-div block">
+    <app-about></app-about>
+  </div>
+  <div class="contact-div block">
+    <app-contact></app-contact>
+  </div>
+  <div class="payment-div block">
+    <app-payment></app-payment>
+  </div>
+  <div class="profile-div block">
+    <app-profile></app-profile>
+  </div>
+</div>
 
 <router-outlet></router-outlet>
