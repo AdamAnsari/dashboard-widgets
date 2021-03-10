@@ -18,7 +18,10 @@ export class PaymentComponent implements OnInit {
     console.log('*****************OPEN MODAL*****************', '/about');
     const dialogRef = this.dialog.open(CommonComponent, {
       width: '95%',
-      height: '95%'
+      height: '95%',
+      data: {
+        imgUrl: '../assets/img/single-chart.PNG'
+      }
     });
 
     dialogRef.afterClosed().subscribe(result => {
