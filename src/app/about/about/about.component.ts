@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { CommonComponent } from 'src/app/common/common/common.component';
-
+import { NgDialogAnimationService } from "ng-dialog-animation";
 
 @Component({
   selector: 'app-about',
@@ -12,7 +12,7 @@ import { CommonComponent } from 'src/app/common/common/common.component';
 export class AboutComponent implements OnInit {
 
   constructor(
-    public dialog: MatDialog,
+    public dialog: NgDialogAnimationService,
     private router: Router,
   ) {}
 
@@ -25,9 +25,11 @@ export class AboutComponent implements OnInit {
       width: '95%',
       height: '98%',
       disableClose: true,
+      animation:{to:"top"},
       data: {
         imgUrl: '../assets/img/open-interest.PNG'
-      }
+      },
+      panelClass: "mat-dialog-height-transition"
     });
 
     dialogRef.afterClosed().subscribe(result => {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CommonComponent } from 'src/app/common/common/common.component';
+import { NgDialogAnimationService } from "ng-dialog-animation";
 
 @Component({
   selector: 'app-payment',
@@ -9,7 +10,9 @@ import { CommonComponent } from 'src/app/common/common/common.component';
 })
 export class PaymentComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(
+    public dialog: NgDialogAnimationService,
+  ) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +22,8 @@ export class PaymentComponent implements OnInit {
     const dialogRef = this.dialog.open(CommonComponent, {
       width: '95%',
       height: '95%',
+      disableClose: true,
+      animation:{to:"top"},
       data: {
         imgUrl: '../assets/img/single-chart.PNG'
       }
