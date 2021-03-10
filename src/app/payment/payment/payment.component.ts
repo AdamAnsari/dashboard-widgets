@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { CommonComponent } from 'src/app/common/common/common.component';
 
 @Component({
   selector: 'app-payment',
@@ -15,12 +16,13 @@ export class PaymentComponent implements OnInit {
 
   openModal() {
     console.log('*****************OPEN MODAL*****************', '/about');
-    const dialogRef = this.dialog.open(PaymentComponent, {
-      width: '500px',
+    const dialogRef = this.dialog.open(CommonComponent, {
+      width: '95%',
+      height: '95%'
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+       console.log(`Dialog result: ${result.message}`);
     });
   }
 

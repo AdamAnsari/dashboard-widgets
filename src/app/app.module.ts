@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact/contact.component';
 import { ProfileComponent } from './profile/profile/profile.component';
 import { PaymentComponent } from './payment/payment/payment.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonComponent } from './common/common/common.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AboutComponent,
     ContactComponent,
     ProfileComponent,
-    PaymentComponent
+    PaymentComponent,
+    CommonComponent
   ],
   imports: [
     BrowserModule,
